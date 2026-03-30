@@ -96,3 +96,184 @@
             font-size: 1.2rem;
             margin-bottom: 40px;
             max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Sección Experiencia y Garantía */
+        .experiencia {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: var(--light-blue);
+        }
+
+        .experiencia h2 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .experiencia p {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .garantia-box {
+            background: white;
+            border-left: 5px solid var(--primary-blue);
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-style: italic;
+        }
+
+        /* Sección Servicios */
+        .servicios {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .servicios h2 {
+            margin-bottom: 40px;
+            color: var(--primary-blue);
+        }
+
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card-servicio {
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card-servicio:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-color: var(--primary-blue);
+        }
+
+        .card-servicio h3 {
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Botón Flotante WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            transition: transform 0.3s;
+            border: 2px solid white;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+            color: white;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">CUSTOM</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#experiencia">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+            </ul>
+        </nav>
+        <a href="#contacto" class="btn-cotizar">Cotizar Proyecto</a>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Expertos en Climatización y Refrigeración en Colombia</h1>
+        <p>Diseño, construcción y mantenimiento de sistemas de ventilación con respaldo técnico, garantía certificada y repuestos originales.</p>
+        <a href="#servicios" class="btn-cotizar" style="font-size: 1.2rem; padding: 15px 30px;">Conoce Nuestros Servicios</a>
+    </section>
+
+    <section id="experiencia" class="experiencia">
+        <h2>Experiencia que genera confianza</h2>
+        <p>En CUSTOM, combinamos años de experiencia en el mercado colombiano con un equipo de ingeniería especializado. No solo instalamos equipos; diseñamos soluciones integrales de refrigeración y ventilación que garantizan eficiencia energética y durabilidad.</p>
+        
+        <div class="garantia-box">
+            <strong>"Nuestra Garantía es su Tranquilidad"</strong><br>
+            Todo servicio cuenta con respaldo post-venta. Aseguramos que sus sistemas funcionen al 100% de su capacidad operativa, extendiendo su vida útil con repuestos originales.
+        </div>
+    </section>
+
+    <section id="servicios" class="servicios">
+        <h2>Soluciones Integrales</h2>
+        <div class="grid-servicios">
+            <div class="card-servicio">
+                <h3>Diseño y Construcción</h3>
+                <p>Creación de sistemas desde cero para locales, oficinas e instalaciones industriales, optimizando el flujo de aire y consumo.</p>
+            </div>
+            <div class="card-servicio">
+                <h3>Mantenimiento Preventivo</h3>
+                <p>Planes programados para limpiar, calibrar y alargar la vida útil de sus equipos, evitando paradas inesperadas.</p>
+            </div>
+            <div class="card-servicio">
+                <h3>Reparación Técnica</h3>
+                <p>Diagnóstico preciso y solución de fallas mecánicas o eléctricas en tiempo récord por técnicos certificados.</p>
+            </div>
+            <div class="card-servicio">
+                <h3>Venta de Repuestos</h3>
+                <p>Comercialización de suministros y repuestos originales multimarca para asegurar el óptimo rendimiento de sus sistemas.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CUSTOM Ventilación, Aire Acondicionado y Refrigeración. Empresa Colombiana.</p>
+    </footer>
+
+    <a href="https://wa.me/570000000000?text=Hola,%20necesito%20una%20asistencia%20técnica%20de%20emergencia" class="whatsapp-float" target="_blank">
+        🚨 ASISTENCIA DE EMERGENCIA
+    </a>
+
+</body>
+</html>
